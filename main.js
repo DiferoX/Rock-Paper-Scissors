@@ -63,7 +63,11 @@ function game (playerSelection, computerSelection)
 {
   if (playRound(playerSelection, computerSelection) === "You Win!, Rock beats Scissors" || playRound(playerSelection, computerSelection) === "You Win!, Paper beats Rock" || playRound(playerSelection, computerSelection) === "You Win!, Scissors beats Paper")
   {
-    return 1;
+    return "1";
+  }
+  else
+  {
+    return "0";
   }
 }
 
@@ -85,7 +89,16 @@ for (let i=1; i<=5; i++)
 
   console.log (playRound(playerSelection, computerSelection));
 
-  win += game(playerSelection, computerSelection);
+  win += parseInt (game(playerSelection, computerSelection));
 
   console.log ("You win " + win + " round");
+}
+
+if (win < 3)
+{
+  alert("You Lose!");
+}
+else
+{
+  alert ("You Win!");
 }
