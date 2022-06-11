@@ -69,11 +69,21 @@ function game (playerSelection, computerSelection)
   else if (playRound(playerSelection, computerSelection) === "You Win!, Rock beats Scissors" || playRound(playerSelection, computerSelection) === "You Win!, Paper beats Rock" || playRound(playerSelection, computerSelection) === "You Win!, Scissors beats Paper")
   {
     win += 1;
+    if (win === 5)
+    {
+      let imgW = document.getElementsByClassName('imgWin');
+      imgW[0].src = 'images/Win.png';
+    }
     return win;
   }
   else
   {
     lose += 1;
+    if (lose === 5)
+    {
+      let imgL = document.getElementsByClassName('imgLose');
+      imgL[0].src = 'images/Lose.png';
+    }
     return lose;
   }
 }
@@ -81,13 +91,23 @@ function game (playerSelection, computerSelection)
 function text()
 {
   let answComp = document.getElementsByClassName('answComp');
-  answComp[0].textContent = computerSelection;
+  switch (computerSelection)
+  {
+    case 'Rock':
+      answComp[0].src = 'images/Rock.png';
+      break;
+    case 'Paper':
+      answComp[0].src = 'images/Paper.png';
+      break;
+    case 'Scissors':
+      answComp[0].src = 'images/Scissors.png';
+      break;
+  }
 
   let infoHead = document.getElementsByClassName('infoHead');
   let info = playRound(playerSelection, computerSelection);
   infoHead[0].textContent = info;
 
-  //win += parseInt (game(playerSelection, computerSelection));
   game(playerSelection, computerSelection)
 
   let scorePlayer = document.getElementsByClassName('scorePlayer');
@@ -97,83 +117,45 @@ function text()
   
 }
 
-/*
-for (let i=1; i<=5; i++)
+
+let btnR = document.getElementsByClassName('buttonRock');
+
+btnR[0].addEventListener('click', function() 
 {
-  //Loop while player type the correct answer
-  do
-  {
-    playerSelection = prompt("Rock - Paper - Scissors").toLowerCase();  
-
-  } while (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors");
-  */
-
-  //let content = document.getElementsByClassName('buttonRPS');
-
-
-
-    let btnR = document.getElementsByClassName('buttonRock');
-
-    btnR[0].addEventListener('click', function() 
-    {
-      playerSelection = "rock";
-      computerSelection = computerRPS[computerPlay()];
-
-      let answPlayer = document.getElementsByClassName('answPlayer');
-      answPlayer[0].textContent = "Rock";
-
-      text();
-
-    });
-
-    let btnP = document.getElementsByClassName('buttonPaper');
-
-    btnP[0].addEventListener('click', function() 
-    {
-      playerSelection = "paper";
-      computerSelection = computerRPS[computerPlay()];
-
-      let answPlayer = document.getElementsByClassName('answPlayer');
-      answPlayer[0].textContent = "Paper";
-
-      text();
-
-    });
-
-    let btnS = document.getElementsByClassName('buttonScissors');
-
-    btnS[0].addEventListener('click', function() 
-    {
-      playerSelection = "scissors";
-      computerSelection = computerRPS[computerPlay()];
-
-      let answPlayer = document.getElementsByClassName('answPlayer');
-      answPlayer[0].textContent = "Scissors";
-
-      text();
-
-    });
-
-
-/*
+  playerSelection = "rock";
   computerSelection = computerRPS[computerPlay()];
 
-  //console.log ("Round " + i);
-  console.log ("Player 1 " + playerSelection);
-  console.log ("Player 2 " + computerSelection);
+  let answPlayer = document.getElementsByClassName('answPlayer');
+  answPlayer[0].src = 'images/Rock.png';
 
-  console.log (playRound(playerSelection, computerSelection));
+  text();
 
-  win += parseInt (game(playerSelection, computerSelection));
+});
 
-  console.log ("You win " + win + " round");
-//}
-/*
-if (win < 3)
+let btnP = document.getElementsByClassName('buttonPaper');
+
+btnP[0].addEventListener('click', function() 
 {
-  alert("You Lose!");
-}
-else
+  playerSelection = "paper";
+  computerSelection = computerRPS[computerPlay()];
+
+  let answPlayer = document.getElementsByClassName('answPlayer');
+  answPlayer[0].src = 'images/Paper.png';
+
+  text();
+
+});
+
+let btnS = document.getElementsByClassName('buttonScissors');
+
+btnS[0].addEventListener('click', function() 
 {
-  alert ("You Win!");
-}*/
+  playerSelection = "scissors";
+  computerSelection = computerRPS[computerPlay()];
+
+  let answPlayer = document.getElementsByClassName('answPlayer');
+  answPlayer[0].src = 'images/Scissors.png';
+
+  text();
+
+});

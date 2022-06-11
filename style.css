@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header
 {
     text-align: center;
     padding: 30px;
-    background-color: #1f2937;
+    background-color: #1f2937d3;
 }
 
 h1
@@ -24,13 +25,19 @@ h1
     font-size: 30px;
     color: white;
     text-align: center;
-    background-color: rgb(60, 60, 70);
+    /*background-color: rgb(60, 60, 70);*/
 }
 
 body
 {
-    background: url(images/RPS.png);
-    background-color: rgba(0, 0, 0, 0.87);
+    background: url(images/RPS10p.png);
+    background-color: rgba(0, 0, 0, 0.904);
+}
+
+.imgWin, .imgLose
+{
+    
+    padding: 0 200px 100px 100px;
 }
 
 button
@@ -81,25 +88,26 @@ button
     margin: auto;
 }
 
-.contentAnsw p 
+.contentAnsw img 
 {
-    font-size: 100px;
+    height: 100px;
+    width: 100px;
     color: white;
 }
 
 .contentAnsw
 {
-    background-color: rgb(60, 60, 70);
+    
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 10px 30px;
+    justify-content: center;
+    gap: 100px;
+    padding: 10px 50px;
     padding-top: 0;
 }
 
 .roundContainer
 {
-    background-color: rgb(60, 60, 70);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -119,14 +127,14 @@ button
 
 footer 
 {
-    background-color: #1f2937;
+    background-color: #1f2937d3;
     color: white;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    position: absolute;
+    position:absolute;
     bottom: 0;
     left: 0;
 }
