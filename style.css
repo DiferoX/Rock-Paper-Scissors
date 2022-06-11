@@ -1,0 +1,132 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    text-align: center;
+    padding: 30px;
+    background-color: #1f2937;
+}
+
+h1
+{
+    font-size: 60px;
+    color: yellow;
+    margin: 10px;
+}
+
+.infoHead
+{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    background-color: rgb(60, 60, 70);
+}
+
+body
+{
+    background: url(images/RPS.png);
+    background-color: rgba(0, 0, 0, 0.87);
+}
+
+button
+{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(60, 60, 70);
+    margin-right: 30px;
+    border-radius: 50%;
+    border-color: red;
+}
+
+.buttonRock
+{
+    background: url(images/Rock.png);
+    background-color: yellow;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttonPaper
+{
+    background: url(images/Paper.png);
+    background-color: yellow;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttonScissors
+{
+    background: url(images/Scissors.png);
+    background-color: yellow;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.buttonRPS
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    width: 100%;
+    margin: auto;
+}
+
+.contentAnsw p 
+{
+    font-size: 100px;
+    color: white;
+}
+
+.contentAnsw
+{
+    background-color: rgb(60, 60, 70);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 30px;
+    padding-top: 0;
+}
+
+.roundContainer
+{
+    background-color: rgb(60, 60, 70);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roundContainer p
+{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    margin: 0 50px;
+}
+
+
+
+
+footer 
+{
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
